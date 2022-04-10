@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import SearchBar from '../Components/SearchBar'
 import DisplayWeather from '../Components/DisplayWeather'
+import './WeatherApp.css';
 
 const WeatherApp = () => {
     const [city, setCity] = useState("")
@@ -17,10 +18,10 @@ const WeatherApp = () => {
     })
 
     return(
-        <div>
+        <div className="main-container">
             <h1>Weather App</h1>
             <SearchBar setCity={setCity}/>
-            <DisplayWeather city={city} weatherData={weatherData}/>
+            { weatherData ? <DisplayWeather city={city} weatherData={weatherData}/> : null}
         </div>
     )
 }

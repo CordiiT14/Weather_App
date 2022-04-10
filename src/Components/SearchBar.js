@@ -26,10 +26,10 @@ const SearchBar = ({setCity}) => {
                 value={search}
                 onChange={handleCityChange}
                 />
-                <input 
+                <input
                 type="submit"
-                value="post"
-                />
+                value="search">
+                </input>
             </form>
         </div>
     )

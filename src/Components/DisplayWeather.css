@@ -1,0 +1,13 @@
+.city-weather {
+    border:solid;
+}
+
+.city-forecast {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.forecast {
+    display: flex;
+    flex-direction: column;
+}
