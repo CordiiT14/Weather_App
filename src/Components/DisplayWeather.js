@@ -17,8 +17,9 @@ const DisplayWeather = ({city, weatherData}) => {
             <h2>{cityName}</h2>
             <div className="current-weather">
                 <h3>{weekdays[today]}</h3>
-                <p>{weatherData.temperature} {weatherData.description} </p>
                 <WeatherIcon weatherType={weatherData.description}/>
+                <p>{weatherData.temperature}</p> 
+                <p className="description">{weatherData.description} </p>
             </div>
             <div className="forecast-container">
                 <h3>Forcast</h3>

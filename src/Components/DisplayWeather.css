@@ -28,3 +28,7 @@
     flex-direction: column;
 }
 
+.description {
+    font-size: 15px;
+    color: #9381FF;
+}
