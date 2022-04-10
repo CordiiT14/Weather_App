@@ -7,14 +7,16 @@ const DisplayWeather = ({city, weatherData}) => {
 
     const currentDate = new Date();
     const today = currentDate.getDay();
+
+    const cityName = city[0].toUpperCase() + city.substring(1);
     
 
     return(
         <div className="city-weather">
-            <h2>{city}</h2>
+            <h2>{cityName}</h2>
             <div>
                 <h3>{weekdays[today]}</h3>
-                <p>Temperature: {weatherData.temperature}</p>
+                <p>{weatherData.temperature}</p>
                 <p>{weatherData.description}</p>
             </div>
             

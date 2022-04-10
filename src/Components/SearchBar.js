@@ -20,6 +20,9 @@ const SearchBar = ({setCity}) => {
     return(
         <div>
             <form onSubmit={handleSearchSubmit}>
+                <label>
+                    Search Weather by City:
+                </label>
                 <input 
                 type="text" 
                 placeholder="City"
