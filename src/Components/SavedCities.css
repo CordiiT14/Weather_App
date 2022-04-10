@@ -1,14 +1,5 @@
-ul {
-    display: flex;
-}
-
-li {
-    justify-content: space-evenly;
-    list-style: none;
-    padding: 5px;
-}
-
 .saved {
+
     border: #FFEEDD;
     color: #342c66;
     background-color: #FFEEDD;
@@ -16,6 +7,21 @@ li {
     opacity: .8;
     margin:10px;
 }
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+li {
+
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style: none;
+    padding: 5px;
+}
+
+
 
 li:hover {
     text-decoration: underline;

@@ -15,6 +15,8 @@ const SearchBar = ({setCity}) => {
         city = city[0].toUpperCase() + search.substring(1);
 
         setCity(city)
+
+        setSearch("");
         }
     }
 

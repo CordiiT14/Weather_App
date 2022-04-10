@@ -7,7 +7,7 @@
     border-radius: 5px;
     margin: 10px;
     padding: 5px;
-    box-shadow: 2px 2px 2px #F8F7FF;
+    /* box-shadow: 2px 2px 2px #F8F7FF; */
 }
 
 .city-forecast {
@@ -21,7 +21,7 @@
     border-radius: 5px;
     margin: 10px;
     padding: 5px;
-    box-shadow: 2px 2px 2px #F8F7FF;
+    /* box-shadow: 2px 2px 2px #F8F7FF; */
 }
 
 .forecast {
@@ -42,8 +42,17 @@
 }
 
 .save-city:hover {
-    /* border-style: solid;
-    border-color: #F8F7FF; */
+    border-radius: 15px;
+    background-color: #FFEEDD;
+}
+
+.remove-saved-city {
+    position: absolute;
+    top: 10px;
+    right:10px ;
+}
+
+.remove-saved-city:hover {
     border-radius: 15px;
     background-color: #FFEEDD;
 }
