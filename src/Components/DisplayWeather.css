@@ -1,5 +1,13 @@
 .city-weather {
-    border:solid;
+
+}
+
+.forecast-container{
+    background: linear-gradient(#cdcdf7,  #9898e3 );
+    border-radius: 5px;
+    margin: 10px;
+    padding: 5px;
+    box-shadow: 2px 2px 2px #F8F7FF;
 }
 
 .city-forecast {
@@ -7,7 +15,16 @@
     justify-content: space-evenly;
 }
 
+.current-weather{
+    background: linear-gradient( #9898e3, #cdcdf7 );
+    border-radius: 5px;
+    margin: 10px;
+    padding: 5px;
+    box-shadow: 2px 2px 2px #F8F7FF;
+}
+
 .forecast {
     display: flex;
     flex-direction: column;
 }
+

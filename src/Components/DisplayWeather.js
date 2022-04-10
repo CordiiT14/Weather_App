@@ -1,5 +1,6 @@
 import React from 'react';
 import './DisplayWeather.css';
+import WeatherIcon from './WeatherIcon';
 
 const DisplayWeather = ({city, weatherData}) => {
 
@@ -14,27 +15,28 @@ const DisplayWeather = ({city, weatherData}) => {
     return(
         <div className="city-weather">
             <h2>{cityName}</h2>
-            <div>
+            <div className="current-weather">
                 <h3>{weekdays[today]}</h3>
-                <p>{weatherData.temperature}</p>
-                <p>{weatherData.description}</p>
+                <p>{weatherData.temperature} {weatherData.description} </p>
+                <WeatherIcon weatherType={weatherData.description}/>
             </div>
-            
-            <h3>Forcast</h3>
-            <section className="city-forecast">
-                <div className="forecast">
-                    <h4>{weekdays[today+1]}</h4>
-                    <p>{weatherData.forecast[0].temperature}</p>
-                </div>
-                <div className="forecast">
-                    <h4>{weekdays[today+2]}</h4>
-                    <p>{weatherData.forecast[1].temperature}</p>
-                </div>
-                <div className="forecast">
-                    <h4>{weekdays[today+3]}</h4>
-                    <p>{weatherData.forecast[2].temperature}</p>
-                </div>
-            </section>
+            <div className="forecast-container">
+                <h3>Forcast</h3>
+                <section className="city-forecast">
+                    <div className="forecast">
+                        <h4>{weekdays[today+1]}</h4>
+                        <p>{weatherData.forecast[0].temperature}</p>
+                    </div>
+                    <div className="forecast">
+                        <h4>{weekdays[today+2]}</h4>
+                        <p>{weatherData.forecast[1].temperature}</p>
+                    </div>
+                    <div className="forecast">
+                        <h4>{weekdays[today+3]}</h4>
+                        <p>{weatherData.forecast[2].temperature}</p>
+                    </div>
+                </section>
+            </div>
         </div>
     )
 }

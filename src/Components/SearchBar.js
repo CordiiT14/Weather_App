@@ -30,7 +30,8 @@ const SearchBar = ({setCity}) => {
                 value={search}
                 onChange={handleCityChange}
                 />
-                <input
+                <input 
+                className='submit'
                 type="submit"
                 value="search">
                 </input>

@@ -4,10 +4,26 @@
     margin-left: 25%;
     margin-right: 25%;
     margin-top: 5%;
-    background: linear-gradient(#FFCDB2, #E5989B);
+    background: linear-gradient(#B8B8FF, #9381FF);
     padding: 10px;
 }
 
 h1 {
-    color: white;
+    color: #342c66;
+    text-shadow: 1px 1px #FFEEDD;
+
+}
+
+h2 {
+    color: #FFEEDD;
+    text-shadow: 2px 2px #9381FF;
+}
+
+h3 {
+    color: #FFEEDD;
+    text-shadow: 2px 2px #9381FF;
+}
+
+p {
+    font-size: 20px;
 }
