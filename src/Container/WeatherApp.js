@@ -23,8 +23,18 @@ const WeatherApp = () => {
 
     const updateSavedCities = () => {
         const updateSaved = savedCities;
+
+        if (currentCityIsSavedCity()){
+            let index = savedCities.findIndex(element => element == city)
+            updateSaved.splice(index, 1)
+            setSavedCities([...updateSaved])
+        } else {
         updateSaved.push(city);
-        setSavedCities([...updateSaved])
+        setSavedCities([...updateSaved])}
+    }
+
+    const currentCityIsSavedCity= () => {
+        return savedCities.includes(city);
     }
 
     return(
@@ -32,7 +42,7 @@ const WeatherApp = () => {
             <h1>Weather App</h1>
             <SearchBar setCity={setCity}/>
             <SavedCities savedCities={savedCities} setCity={setCity}/>
-            { weatherData ? <DisplayWeather city={city} weatherData={weatherData} updateSavedCities={updateSavedCities}/> : null}
+            { weatherData ? <DisplayWeather city={city} weatherData={weatherData} updateSavedCities={updateSavedCities} savedCity={currentCityIsSavedCity}/> : null}
         </div>
     )
 }

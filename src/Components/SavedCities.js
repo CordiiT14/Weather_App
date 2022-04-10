@@ -5,14 +5,13 @@ import './SavedCities.css';
 const SavedCities = ({savedCities, setCity}) => {
 
     const handleClick = (event) => {
-        const city = event.target.value
-        console.log(event)
-        // setCity(city)
-    }
+        const city = event.target.textContent
+        setCity(city);
+    };
 
     const savedNodes = savedCities.map( (city, index) => {
         return <li onClick={handleClick} key={index} value={city}>{city}</li>
-    })
+    });
 
 
 
@@ -23,5 +22,5 @@ const SavedCities = ({savedCities, setCity}) => {
         </ul>
         </div>
     )
-}
+};
 export default SavedCities;

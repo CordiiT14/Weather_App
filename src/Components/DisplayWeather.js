@@ -2,7 +2,7 @@ import React from 'react';
 import './DisplayWeather.css';
 import WeatherIcon from './WeatherIcon';
 
-const DisplayWeather = ({city, weatherData, updateSavedCities}) => {
+const DisplayWeather = ({city, weatherData, updateSavedCities, savedCity}) => {
 
     const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 
@@ -16,9 +16,24 @@ const DisplayWeather = ({city, weatherData, updateSavedCities}) => {
 
     return(
         <div className="city-weather">
-            <h2>{city}</h2>
+            
             <div className="current-weather">
-            <img className="save-city" onClick={handleClick} src="https://cdn-icons.flaticon.com/png/512/5952/premium/5952571.png?token=exp=1649598868~hmac=8cdf42511a8c1a4f5eb1953db87183ef" width="30px"></img>
+            <h2>{city}</h2>
+            {  !savedCity() ?
+                <img 
+                className="save-city" 
+                onClick={handleClick} 
+                src="https://cdn-icons.flaticon.com/png/512/6048/premium/6048111.png?token=exp=1649607955~hmac=8d96693534a71ea8886c4f28fda1aafa" 
+                width="30px">
+                </img>  :
+                <img
+                className="remove-saved-city"
+                onClick={handleClick}
+                src="https://cdn-icons.flaticon.com/png/512/6048/premium/6048130.png?token=exp=1649608446~hmac=1220f46eac9cf4f78015be653f8423ce"
+                width="30px"
+                >
+                </img>
+            }   
                 <h3>{weekdays[today]}</h3>
                 <WeatherIcon weatherType={weatherData.description}/>
                 <p>{weatherData.temperature}</p> 

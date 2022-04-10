@@ -42,7 +42,8 @@
 }
 
 .save-city:hover {
-    border-style: solid;
-    border-color: #F8F7FF;
-    border-radius: 5px;
+    /* border-style: solid;
+    border-color: #F8F7FF; */
+    border-radius: 15px;
+    background-color: #FFEEDD;
 }
