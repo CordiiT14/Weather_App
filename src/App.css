@@ -1,4 +1,10 @@
 .App {
   text-align: center;
+
+}
+
+body {
+  margin: 0;
+  background-color: #6D6875;
 }
 

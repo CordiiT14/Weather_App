@@ -4,7 +4,7 @@ import DisplayWeather from '../Components/DisplayWeather'
 import './WeatherApp.css';
 
 const WeatherApp = () => {
-    const [city, setCity] = useState("")
+    const [city, setCity] = useState("Edinburgh")
     const [weatherData, setWeatherData] = useState("")
 
     const getWeather = () => {
@@ -15,7 +15,7 @@ const WeatherApp = () => {
 
     useEffect(() => {
         getWeather();
-    })
+    },[city]);
 
     return(
         <div className="main-container">
