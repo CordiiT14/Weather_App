@@ -2,20 +2,23 @@ import React from 'react';
 import './DisplayWeather.css';
 import WeatherIcon from './WeatherIcon';
 
-const DisplayWeather = ({city, weatherData}) => {
+const DisplayWeather = ({city, weatherData, updateSavedCities}) => {
 
     const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 
     const currentDate = new Date();
     const today = currentDate.getDay();
 
-    const cityName = city[0].toUpperCase() + city.substring(1);
     
+    const handleClick = () => {
+        updateSavedCities();
+    };
 
     return(
         <div className="city-weather">
-            <h2>{cityName}</h2>
+            <h2>{city}</h2>
             <div className="current-weather">
+            <img className="save-city" onClick={handleClick} src="https://cdn-icons.flaticon.com/png/512/5952/premium/5952571.png?token=exp=1649598868~hmac=8cdf42511a8c1a4f5eb1953db87183ef" width="30px"></img>
                 <h3>{weekdays[today]}</h3>
                 <WeatherIcon weatherType={weatherData.description}/>
                 <p>{weatherData.temperature}</p> 
@@ -38,6 +41,7 @@ const DisplayWeather = ({city, weatherData}) => {
                     </div>
                 </section>
             </div>
+        
         </div>
     )
 }

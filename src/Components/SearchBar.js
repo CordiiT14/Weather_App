@@ -8,9 +8,14 @@ const SearchBar = ({setCity}) => {
 
     const handleSearchSubmit = (event) => {
         event.preventDefault();
-        const city = search.trim().toLowerCase()
+        if (search == ""){
+            return
+        } else {
+        let city = search.trim()
+        city = city[0].toUpperCase() + search.substring(1);
 
         setCity(city)
+        }
     }
 
     const handleCityChange = (event) => {

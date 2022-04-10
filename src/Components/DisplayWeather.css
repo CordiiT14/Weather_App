@@ -16,6 +16,7 @@
 }
 
 .current-weather{
+    position: relative;
     background: linear-gradient( #9898e3, #cdcdf7 );
     border-radius: 5px;
     margin: 10px;
@@ -31,4 +32,17 @@
 .description {
     font-size: 15px;
     color: #9381FF;
+}
+
+.save-city {
+    position: absolute;
+    top: 10px;
+    right:10px ;
+    
+}
+
+.save-city:hover {
+    border-style: solid;
+    border-color: #F8F7FF;
+    border-radius: 5px;
 }
