@@ -42,7 +42,7 @@
 }
 
 .save-city:hover {
-    border-radius: 15px;
+    border-radius: 8px;
     background-color: #FFEEDD;
 }
 
@@ -53,6 +53,6 @@
 }
 
 .remove-saved-city:hover {
-    border-radius: 15px;
+    border-radius: 8px;
     background-color: #FFEEDD;
 }

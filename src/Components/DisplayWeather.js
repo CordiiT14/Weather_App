@@ -2,6 +2,7 @@ import React from 'react';
 import './DisplayWeather.css';
 import WeatherIcon from './WeatherIcon';
 
+
 const DisplayWeather = ({city, weatherData, updateSavedCities, savedCity}) => {
 
     const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
@@ -23,13 +24,13 @@ const DisplayWeather = ({city, weatherData, updateSavedCities, savedCity}) => {
                 <img 
                 className="save-city" 
                 onClick={handleClick} 
-                src="" 
+                src={`${process.env.PUBLIC_URL}../../assests/images/001-plus.png`} 
                 width="30px">
                 </img>  :
                 <img
                 className="remove-saved-city"
                 onClick={handleClick}
-                src=""
+                src={`${process.env.PUBLIC_URL}../../assests/images/002-minus.png`}
                 width="30px"
                 >
                 </img>
