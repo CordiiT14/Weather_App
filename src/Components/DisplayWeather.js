@@ -23,13 +23,13 @@ const DisplayWeather = ({city, weatherData, updateSavedCities, savedCity}) => {
                 <img 
                 className="save-city" 
                 onClick={handleClick} 
-                src="https://cdn-icons.flaticon.com/png/512/6048/premium/6048111.png?token=exp=1649607955~hmac=8d96693534a71ea8886c4f28fda1aafa" 
+                src="" 
                 width="30px">
                 </img>  :
                 <img
                 className="remove-saved-city"
                 onClick={handleClick}
-                src="https://cdn-icons.flaticon.com/png/512/6048/premium/6048130.png?token=exp=1649608446~hmac=1220f46eac9cf4f78015be653f8423ce"
+                src=""
                 width="30px"
                 >
                 </img>
